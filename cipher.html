@@ -122,6 +122,15 @@
         // Ditto, when you find the number y such that
         // (myMultiplier * y) % 26 == 1, set myMultiplier = y
 
+      for (var i = 0; i < input.length; i = i + 1) {
+        if (myAdder+i%26==0){
+          myAdder=i;
+          if (myMultiplier*i%26==1){
+            myMultiplier=i;
+          }
+        }
+      }
+
         adder.value = inverseAdder;
         multiplier.value = inverseMultiplier;
       }
